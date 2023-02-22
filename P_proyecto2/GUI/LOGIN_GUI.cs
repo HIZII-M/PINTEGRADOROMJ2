@@ -32,5 +32,10 @@ namespace P_proyecto2.GUI
         {
            
         }
+
+        private void btn_p2_Click(object sender, EventArgs e)
+        {
+            //comentario para ver si surgen cambios
+        }
     }
 }

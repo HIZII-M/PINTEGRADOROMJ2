@@ -164,7 +164,7 @@
             // 
             // btn_p1
             // 
-            this.btn_p1.Location = new System.Drawing.Point(372, 338);
+            this.btn_p1.Location = new System.Drawing.Point(372, 294);
             this.btn_p1.Name = "btn_p1";
             this.btn_p1.Size = new System.Drawing.Size(75, 61);
             this.btn_p1.TabIndex = 11;
@@ -174,12 +174,13 @@
             // 
             // btn_p2
             // 
-            this.btn_p2.Location = new System.Drawing.Point(372, 425);
+            this.btn_p2.Location = new System.Drawing.Point(372, 404);
             this.btn_p2.Name = "btn_p2";
             this.btn_p2.Size = new System.Drawing.Size(75, 61);
             this.btn_p2.TabIndex = 12;
             this.btn_p2.Text = "prueba2";
             this.btn_p2.UseVisualStyleBackColor = true;
+            this.btn_p2.Click += new System.EventHandler(this.btn_p2_Click);
             // 
             // login_GUI
             // 
