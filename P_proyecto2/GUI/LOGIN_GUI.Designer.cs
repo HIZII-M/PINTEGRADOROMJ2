@@ -29,206 +29,197 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login_GUI));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_user = new System.Windows.Forms.TextBox();
             this.lbl_usuario = new System.Windows.Forms.Label();
             this.lbl_contraseña = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_contra = new System.Windows.Forms.TextBox();
             this.btn_login = new System.Windows.Forms.Button();
             this.lbl_olvid = new System.Windows.Forms.Label();
             this.recordar = new System.Windows.Forms.CheckBox();
+            this.btn_exit = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_p1 = new System.Windows.Forms.Button();
-            this.btn_p2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_user
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 355);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 26);
-            this.textBox1.TabIndex = 2;
+            this.txt_user.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txt_user.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.txt_user, "txt_user");
+            this.txt_user.Name = "txt_user";
+            this.txt_user.TextChanged += new System.EventHandler(this.txt_user_TextChanged);
             // 
             // lbl_usuario
             // 
-            this.lbl_usuario.AutoSize = true;
-            this.lbl_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            resources.ApplyResources(this.lbl_usuario, "lbl_usuario");
+            this.lbl_usuario.BackColor = System.Drawing.Color.Transparent;
             this.lbl_usuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_usuario.Location = new System.Drawing.Point(166, 314);
             this.lbl_usuario.Name = "lbl_usuario";
-            this.lbl_usuario.Size = new System.Drawing.Size(64, 20);
-            this.lbl_usuario.TabIndex = 3;
-            this.lbl_usuario.Text = "Usuario";
             // 
             // lbl_contraseña
             // 
-            this.lbl_contraseña.AutoSize = true;
-            this.lbl_contraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            resources.ApplyResources(this.lbl_contraseña, "lbl_contraseña");
+            this.lbl_contraseña.BackColor = System.Drawing.Color.Transparent;
             this.lbl_contraseña.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_contraseña.Location = new System.Drawing.Point(155, 445);
             this.lbl_contraseña.Name = "lbl_contraseña";
-            this.lbl_contraseña.Size = new System.Drawing.Size(92, 20);
-            this.lbl_contraseña.TabIndex = 4;
-            this.lbl_contraseña.Text = "Contraseña";
             // 
-            // textBox2
+            // txt_contra
             // 
-            this.textBox2.Location = new System.Drawing.Point(144, 484);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 26);
-            this.textBox2.TabIndex = 5;
+            this.txt_contra.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txt_contra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.txt_contra, "txt_contra");
+            this.txt_contra.Name = "txt_contra";
+            this.txt_contra.TextChanged += new System.EventHandler(this.txt_contra_TextChanged);
             // 
             // btn_login
             // 
             this.btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(116)))), ((int)(((byte)(30)))));
+            this.btn_login.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btn_login, "btn_login");
             this.btn_login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_login.Location = new System.Drawing.Point(133, 551);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(1);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(141, 52);
-            this.btn_login.TabIndex = 8;
-            this.btn_login.Text = "Log in";
             this.btn_login.UseVisualStyleBackColor = false;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // lbl_olvid
             // 
-            this.lbl_olvid.AutoSize = true;
-            this.lbl_olvid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_olvid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(166)))), ((int)(((byte)(246)))));
-            this.lbl_olvid.Location = new System.Drawing.Point(115, 680);
+            resources.ApplyResources(this.lbl_olvid, "lbl_olvid");
+            this.lbl_olvid.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_olvid.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_olvid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.lbl_olvid.Name = "lbl_olvid";
-            this.lbl_olvid.Size = new System.Drawing.Size(159, 20);
-            this.lbl_olvid.TabIndex = 9;
-            this.lbl_olvid.Text = "Olvide mi Contraseña";
             // 
             // recordar
             // 
-            this.recordar.AutoSize = true;
+            resources.ApplyResources(this.recordar, "recordar");
+            this.recordar.BackColor = System.Drawing.Color.Transparent;
             this.recordar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.recordar.Location = new System.Drawing.Point(133, 637);
             this.recordar.Name = "recordar";
-            this.recordar.Size = new System.Drawing.Size(123, 24);
-            this.recordar.TabIndex = 10;
-            this.recordar.Text = "Recordarme";
-            this.recordar.UseVisualStyleBackColor = true;
+            this.recordar.UseVisualStyleBackColor = false;
+            // 
+            // btn_exit
+            // 
+            this.btn_exit.BackColor = System.Drawing.Color.Transparent;
+            this.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_exit.Image = global::P_proyecto2.Properties.Resources.exit2;
+            resources.ApplyResources(this.btn_exit, "btn_exit");
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.TabStop = false;
+            this.btn_exit.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::P_proyecto2.Properties.Resources.c;
-            this.pictureBox4.Location = new System.Drawing.Point(67, 475);
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(71, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::P_proyecto2.Properties.Resources.l;
-            this.pictureBox3.Location = new System.Drawing.Point(76, 331);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(390, 680);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(57, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-7, -12);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::P_proyecto2.Properties.Resources.lllllllllllllllll_remov;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(475, 294);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_p1
+            // panel1
             // 
-            this.btn_p1.Location = new System.Drawing.Point(372, 294);
-            this.btn_p1.Name = "btn_p1";
-            this.btn_p1.Size = new System.Drawing.Size(75, 61);
-            this.btn_p1.TabIndex = 11;
-            this.btn_p1.Text = "prueba";
-            this.btn_p1.UseVisualStyleBackColor = true;
-            this.btn_p1.Click += new System.EventHandler(this.btn_p1_Click);
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::P_proyecto2.Properties.Resources.FONDO_LOGIMA;
+            this.panel1.Controls.Add(this.pictureBox1);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
             // 
-            // btn_p2
+            // panel2
             // 
-            this.btn_p2.Location = new System.Drawing.Point(372, 404);
-            this.btn_p2.Name = "btn_p2";
-            this.btn_p2.Size = new System.Drawing.Size(75, 61);
-            this.btn_p2.TabIndex = 12;
-            this.btn_p2.Text = "prueba2";
-            this.btn_p2.UseVisualStyleBackColor = true;
-            this.btn_p2.Click += new System.EventHandler(this.btn_p2_Click);
+            this.panel2.Controls.Add(this.panel3);
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            // 
+            // panel3
+            // 
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btn_exit);
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.Name = "panel4";
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             // 
             // login_GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(458, 724);
-            this.Controls.Add(this.btn_p2);
-            this.Controls.Add(this.btn_p1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(55)))), ((int)(((byte)(61)))));
+            this.BackgroundImage = global::P_proyecto2.Properties.Resources.fondo_login;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.recordar);
             this.Controls.Add(this.lbl_olvid);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_contra);
             this.Controls.Add(this.lbl_contraseña);
             this.Controls.Add(this.lbl_usuario);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txt_user);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "login_GUI";
-            this.Opacity = 0.9D;
-            this.Text = "login_GUI";
+            this.Opacity = 0.98D;
+            this.Load += new System.EventHandler(this.login_GUI_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_user;
         private System.Windows.Forms.Label lbl_usuario;
         private System.Windows.Forms.Label lbl_contraseña;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_contra;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Label lbl_olvid;
         private System.Windows.Forms.CheckBox recordar;
-        private System.Windows.Forms.Button btn_p1;
-        private System.Windows.Forms.Button btn_p2;
+        private System.Windows.Forms.PictureBox btn_exit;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
