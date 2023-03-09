@@ -46,18 +46,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BO\empleados_BO.cs" />
     <Compile Include="DAO\conexion_DAO.cs" />
+    <Compile Include="DAO\empleados_DAO.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\faltaemp_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\faltaemp_GUI.Designer.cs">
+      <DependentUpon>faltaemp_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LOGIN_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\LOGIN_GUI.Designer.cs">
       <DependentUpon>LOGIN_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\logo_menu_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\logo_menu_GUI.Designer.cs">
+      <DependentUpon>logo_menu_GUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\menu_GUI.cs">
       <SubType>Form</SubType>
@@ -79,11 +93,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\faltaemp_GUI.resx">
+      <DependentUpon>faltaemp_GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\LOGIN_GUI.aa.resx">
       <DependentUpon>LOGIN_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LOGIN_GUI.resx">
       <DependentUpon>LOGIN_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\logo_menu_GUI.resx">
+      <DependentUpon>logo_menu_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\menu_GUI.resx">
       <DependentUpon>menu_GUI.cs</DependentUpon>
@@ -126,9 +146,7 @@
   <ItemGroup>
     <None Include="Resources\salirboton.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\exit2.png" />
   </ItemGroup>
@@ -143,6 +161,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondo_login1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emblemunreadable_93487.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnexit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

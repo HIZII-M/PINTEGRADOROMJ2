@@ -51,8 +51,8 @@
             this.fondo.Image = ((System.Drawing.Image)(resources.GetObject("fondo.Image")));
             this.fondo.Location = new System.Drawing.Point(0, 0);
             this.fondo.Name = "fondo";
-            this.fondo.Size = new System.Drawing.Size(852, 595);
-            this.fondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fondo.Size = new System.Drawing.Size(1478, 595);
+            this.fondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fondo.TabIndex = 0;
             this.fondo.TabStop = false;
             this.fondo.Click += new System.EventHandler(this.fondo_Click);
@@ -62,7 +62,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(852, 595);
+            this.ClientSize = new System.Drawing.Size(1478, 1017);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.fondo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

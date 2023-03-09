@@ -24,10 +24,8 @@ namespace P_proyecto2
 
         private void recargaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            {
+            
                 OpenFormRecharge(new recarga_GUI());
-            }
-
         }
 
         private void OpenFormRecharge(object formrecarga)
@@ -43,6 +41,8 @@ namespace P_proyecto2
             fh.Show();
         }
 
+
+
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
@@ -50,7 +50,8 @@ namespace P_proyecto2
 
         private void menu_GUI_Load(object sender, EventArgs e)
         {
-
+            OpenFormRecharge(new logo_menu_GUI());
+           // usuarioToolStripMenuItem.Visible = false;     para ocultar botones
         }
 
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -58,7 +59,19 @@ namespace P_proyecto2
           
         }
 
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFormRecharge(new Usuario());
+        }
 
- 
+        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFormRecharge(new logo_menu_GUI());
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
+        }
     }
 }

@@ -16,6 +16,10 @@ namespace P_proyecto2.GUI
 {
     public partial class login_GUI : Form
     {
+
+
+        conexion_DAO obj = new conexion_DAO();
+
         public login_GUI()
         {
             InitializeComponent();
@@ -28,8 +32,8 @@ namespace P_proyecto2.GUI
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            conexion_DAO.Conectar();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT COUNT (*) FROM EMPLEADOS WHERE MATRICULA='" + txt_user.Text + "'AND PASSWORDS='" + txt_contra.Text + "' ", conexion_DAO.Conectar());
+            obj.Conectar();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT COUNT (*) FROM EMPLEADOS WHERE MATRICULA='" + txt_user.Text + "'AND PASSWORDS='" + txt_contra.Text + "' ", obj.Conectar());
             
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -57,7 +61,7 @@ namespace P_proyecto2.GUI
 
         private void login_GUI_Load(object sender, EventArgs e)
         {
-            conexion_DAO.Conectar();
+            obj.Conectar();
             MessageBox.Show("La conexion fue un exito");
         }
 
