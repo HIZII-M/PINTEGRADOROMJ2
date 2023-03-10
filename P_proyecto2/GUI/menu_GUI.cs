@@ -73,5 +73,15 @@ namespace P_proyecto2
         {
             this.Close(); 
         }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFormRecharge(new CLIENTES_GUI());
+        }
+
+        private void PNL_Panel_Contenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

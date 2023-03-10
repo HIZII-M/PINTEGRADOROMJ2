@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgv_emple = new System.Windows.Forms.DataGridView();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
@@ -47,28 +45,16 @@
             this.txtname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtmatricula = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_emple)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1478, 1017);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // dgv_emple
             // 
             this.dgv_emple.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_emple.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_emple.Location = new System.Drawing.Point(41, 459);
+            this.dgv_emple.Location = new System.Drawing.Point(37, 476);
             this.dgv_emple.Name = "dgv_emple";
             this.dgv_emple.RowHeadersWidth = 62;
             this.dgv_emple.RowTemplate.Height = 28;
@@ -121,10 +107,11 @@
             this.panel1.Controls.Add(this.txtname);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtmatricula);
-            this.panel1.Location = new System.Drawing.Point(64, 123);
+            this.panel1.Location = new System.Drawing.Point(46, 92);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(735, 302);
+            this.panel1.Size = new System.Drawing.Size(737, 330);
             this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label7
             // 
@@ -189,6 +176,7 @@
             this.txtapellid.Name = "txtapellid";
             this.txtapellid.Size = new System.Drawing.Size(257, 26);
             this.txtapellid.TabIndex = 17;
+            this.txtapellid.TextChanged += new System.EventHandler(this.txtapellid_TextChanged);
             // 
             // label3
             // 
@@ -219,35 +207,43 @@
             // 
             this.txtmatricula.Location = new System.Drawing.Point(109, 19);
             this.txtmatricula.Name = "txtmatricula";
+            this.txtmatricula.ReadOnly = true;
             this.txtmatricula.Size = new System.Drawing.Size(107, 26);
             this.txtmatricula.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(51, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Gestión de Empleados";
             // 
             // Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1478, 1017);
+            this.ClientSize = new System.Drawing.Size(1300, 1017);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.dgv_emple);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Usuario";
             this.Text = "Usuario";
             this.Load += new System.EventHandler(this.Usuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_emple)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgv_emple;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_delete;
@@ -265,5 +261,6 @@
         private System.Windows.Forms.TextBox txtname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtmatricula;
+        private System.Windows.Forms.Label label1;
     }
 }

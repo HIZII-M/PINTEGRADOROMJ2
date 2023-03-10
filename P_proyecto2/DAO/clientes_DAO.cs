@@ -9,22 +9,22 @@ using System.Threading.Tasks;
 
 namespace P_proyecto2.DAO
 {
-    internal class empleados_DAO
+    internal class clientes_DAO
     {
-
 
         conexion_DAO objBD = new conexion_DAO();       //creamos una variable que ejecute el comando sqlserver
         SqlCommand cmd = new SqlCommand();
-        string ABC;                                //variable para la estructura para insertar, eliminar o actualizar
+        string ABC;
 
 
 
-        public bool GuardarEMP(empleados_BO objDiv)        //CReamos un metodo de tipo bool para guardar
+
+        public bool GuardarCLI(clientes_BO objDiv)        //CReamos un metodo de tipo bool para guardar
         {
-            empleados_BO datos = (empleados_BO)objDiv;
+            clientes_BO datos = (clientes_BO)objDiv;
             cmd.Connection = objBD.Conectar();
             objBD.abrirBD();
-            ABC = "Insert into EMPLEADOS (PASSWORDS, NOMBRE, APELLIDO, CELULAR, EMAIL) values('" + datos.Passwords + "' , '" + datos.Nombre+"' , '"+datos.Apellido+"' , '"+datos.Celular+"' , '"+datos.Email+"' ) ";
+            ABC = "Insert into CLIENTES ( NOMBRE_C, APELLIDO_C, CELULAR_C) values('" + datos.Nombre_c + "' , '" + datos.Apellido_c + "' , '" + datos.Celular_c + "') ";
             cmd.CommandText = ABC;
             int Acuse = cmd.ExecuteNonQuery();
             objBD.cerrarBD();
@@ -37,21 +37,21 @@ namespace P_proyecto2.DAO
 
         }
 
-        public DataTable Tablaempleados()         //metodo para mostrar la tabla al datagridview
+        public DataTable Tablaclientes()         //metodo para mostrar la tabla al datagridview
         {
-            string ConSQL = "select * from EMPLEADOS";
+            string ConSQL = "select * from CLIENTES";
             SqlDataAdapter adp = new SqlDataAdapter(ConSQL, objBD.Conectar());
             DataTable TablaVirtual = new DataTable();
             adp.Fill(TablaVirtual);
             return TablaVirtual;
         }
 
-        public bool ActualizarEMP(empleados_BO objDiv)         //CReamos un metodo de tipo bool para actualizar
+        public bool ActualizarCLI(clientes_BO objDiv)         //CReamos un metodo de tipo bool para actualizar
         {
-            empleados_BO datos = (empleados_BO)objDiv;
+            clientes_BO datos = (clientes_BO)objDiv;
             cmd.Connection = objBD.Conectar();
             objBD.abrirBD();
-            ABC = "update EMPLEADOS set PASSWORDS = '" + datos.Passwords + "', NOMBRE = '"+ datos.Nombre+ "', APELLIDO= '"+datos.Apellido+"', CELULAR= '"+datos.Celular+"', EMAIL='" +datos.Email+ "'  where MATRICULA = '" + datos.Matricula + "'";
+            ABC = "update CLIENTES set NOMBRE_C = '" + datos.Nombre_c + "', APELLIDO_C= '" + datos.Apellido_c + "', CELULAR_C= '" + datos.Celular_c + "'  where ID_CLIE = '" + datos.Id_clie + "'";
             cmd.CommandText = ABC;
             int Acuse = cmd.ExecuteNonQuery();
             objBD.cerrarBD();
@@ -63,12 +63,12 @@ namespace P_proyecto2.DAO
 
         }
 
-        public bool EliminarEMP(empleados_BO objDiv)         //CReamos un metodo de tipo bool para eliminar
+        public bool EliminarCLI(clientes_BO objDiv)         //CReamos un metodo de tipo bool para eliminar
         {
-            empleados_BO datos = (empleados_BO)objDiv;
+            clientes_BO datos = (clientes_BO )objDiv;
             cmd.Connection = objBD.Conectar();
             objBD.abrirBD();
-            ABC = "DELETE FROM EMPLEADOS Where MATRICULA='" + datos.Matricula + "'"; 
+            ABC = "DELETE FROM CLIENTES Where ID_CLIE='" + datos.Id_clie + "'";
             cmd.CommandText = ABC;
             int Acuse = cmd.ExecuteNonQuery();
             objBD.cerrarBD();
@@ -79,6 +79,7 @@ namespace P_proyecto2.DAO
             return true;
 
         }
+
 
 
 

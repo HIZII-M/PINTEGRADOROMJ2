@@ -21,7 +21,7 @@ namespace P_proyecto2.DAO
         //Metodo de conexion a BD
         public  SqlConnection Conectar()
         {                                          //name server en management                 nombre de la bd       tipo de auteniticacion
-            string CadenaConexion = "Data Source = DESKTOP-OMHJV6F\\SQLEXPRESS ; Initial Catalog= pintegrador1v; Integrated Security=true  ";
+            string CadenaConexion = "Data Source = DESKTOP-OMHJV6F\\SQLEXPRESS ; Initial Catalog= pintegrador3v; Integrated Security=true  ";
             Conex = new SqlConnection(CadenaConexion);
             return Conex;
         }

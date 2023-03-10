@@ -32,10 +32,10 @@
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recargaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PNL_Panel_Contenedor = new System.Windows.Forms.Panel();
-            this.btn_exit = new System.Windows.Forms.PictureBox();
             this.tarjetaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PNL_Panel_Contenedor = new System.Windows.Forms.Panel();
+            this.btn_exit = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_exit)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +83,19 @@
             this.usuarioToolStripMenuItem.Text = "Empleado";
             this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
+            // tarjetaToolStripMenuItem
+            // 
+            this.tarjetaToolStripMenuItem.Name = "tarjetaToolStripMenuItem";
+            this.tarjetaToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
+            this.tarjetaToolStripMenuItem.Text = "Tarjeta";
+            // 
+            // clienteToolStripMenuItem
+            // 
+            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
+            this.clienteToolStripMenuItem.Text = "Cliente";
+            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
+            // 
             // PNL_Panel_Contenedor
             // 
             this.PNL_Panel_Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -90,6 +103,7 @@
             this.PNL_Panel_Contenedor.Name = "PNL_Panel_Contenedor";
             this.PNL_Panel_Contenedor.Size = new System.Drawing.Size(1300, 1017);
             this.PNL_Panel_Contenedor.TabIndex = 1;
+            this.PNL_Panel_Contenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PNL_Panel_Contenedor_Paint);
             // 
             // btn_exit
             // 
@@ -104,18 +118,6 @@
             this.btn_exit.TabIndex = 0;
             this.btn_exit.TabStop = false;
             this.btn_exit.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // tarjetaToolStripMenuItem
-            // 
-            this.tarjetaToolStripMenuItem.Name = "tarjetaToolStripMenuItem";
-            this.tarjetaToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
-            this.tarjetaToolStripMenuItem.Text = "Tarjeta";
-            // 
-            // clienteToolStripMenuItem
-            // 
-            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
-            this.clienteToolStripMenuItem.Text = "Cliente";
             // 
             // menu_GUI
             // 
