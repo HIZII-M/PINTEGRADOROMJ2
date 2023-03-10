@@ -38,7 +38,7 @@
             // 
             this.salir.BackColor = System.Drawing.Color.Transparent;
             this.salir.BackgroundImage = global::P_proyecto2.Properties.Resources.salirboton;
-            this.salir.Location = new System.Drawing.Point(592, 461);
+            this.salir.Location = new System.Drawing.Point(596, 463);
             this.salir.Margin = new System.Windows.Forms.Padding(0);
             this.salir.Name = "salir";
             this.salir.Size = new System.Drawing.Size(139, 41);
@@ -47,11 +47,12 @@
             // 
             // fondo
             // 
-            this.fondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fondo.Dock = System.Windows.Forms.DockStyle.Top;
             this.fondo.Image = ((System.Drawing.Image)(resources.GetObject("fondo.Image")));
             this.fondo.Location = new System.Drawing.Point(0, 0);
             this.fondo.Name = "fondo";
-            this.fondo.Size = new System.Drawing.Size(852, 595);
+            this.fondo.Size = new System.Drawing.Size(1478, 595);
+            this.fondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fondo.TabIndex = 0;
             this.fondo.TabStop = false;
             this.fondo.Click += new System.EventHandler(this.fondo_Click);
@@ -60,11 +61,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 595);
+            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.ClientSize = new System.Drawing.Size(1478, 1017);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.fondo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "recarga_GUI";
-            this.Text = "recarga_GUI";
+            this.Text = "  ";
             this.Load += new System.EventHandler(this.recarga_GUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fondo)).EndInit();
             this.ResumeLayout(false);
